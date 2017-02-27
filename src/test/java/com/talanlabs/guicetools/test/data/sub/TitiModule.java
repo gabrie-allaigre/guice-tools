@@ -1,17 +1,20 @@
-package com.talanlabs.guicetools.test.data;
+package com.talanlabs.guicetools.test.data.sub;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import com.talanlabs.guicetools.Configuration;
+import com.talanlabs.guicetools.test.data.MyModule;
 
 @MyModule
-public class TataModule extends AbstractModule {
+@Configuration
+public class TitiModule extends AbstractModule {
 
     @Override
     protected void configure() {
     }
 
     @Provides
-    public Tata tata() {
-        return new Tata();
+    public Titi titi() {
+        return new Titi();
     }
 }
