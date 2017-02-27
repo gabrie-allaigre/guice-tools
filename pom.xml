@@ -25,6 +25,7 @@
 
         <junit.version>4.12</junit.version>
         <assertj-core.version>3.4.0</assertj-core.version>
+        <mockito-core.version>2.7.12</mockito-core.version>
 
         <jacoco-maven-plugin.version>0.7.5.201505241946</jacoco-maven-plugin.version>
         <jacoco.ut.execution.data.file>${project.build.directory}/coverage-reports/jacoco-ut.exec
@@ -156,6 +157,13 @@
             <version>${assertj-core.version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-core</artifactId>
+            <version>${mockito-core.version}</version>
+            <scope>test</scope>
+        </dependency>
+
 
         <!-- GUICE -->
         <dependency>

@@ -43,6 +43,12 @@ public class ComponentScanModule extends AbstractModule {
     @Override
     public void configure() {
         Reflections packageReflections = new Reflections(packageName);
-        bindingAnnotations.stream().map(packageReflections::getTypesAnnotatedWith).flatMap(Set::stream).forEach(this::bind);
+        bindingAnnotations.stream().map(packageReflections::getTypesAnnotatedWith).flatMap(Set::stream).sorted(this::orderClass).forEach(this::bind);
+    }
+
+    private int orderClass(Class<?> a, Class<?> b) {
+        int va = a.isAnnotationPresent(Order.class) ? a.getAnnotation(Order.class).value() : Integer.MAX_VALUE;
+        int vb = b.isAnnotationPresent(Order.class) ? b.getAnnotation(Order.class).value() : Integer.MAX_VALUE;
+        return Integer.compare(va, vb);
     }
 }

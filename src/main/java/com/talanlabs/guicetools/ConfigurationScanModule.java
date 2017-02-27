@@ -30,12 +30,18 @@ public class ConfigurationScanModule extends AbstractModule {
     @Override
     public void configure() {
         Reflections packageReflections = new Reflections(packageName);
-        Try<List<Module>> ms = installAnnotations.stream().map(packageReflections::getTypesAnnotatedWith).flatMap(Set::stream).filter(Module.class::isAssignableFrom)
+        Try<List<Module>> ms = installAnnotations.stream().map(packageReflections::getTypesAnnotatedWith).flatMap(Set::stream).filter(Module.class::isAssignableFrom).sorted(this::orderClass)
                 .map(Try.lazyOf(Class::newInstance)).map(Try.lazyOf(o -> (Module) o.get().getOrThrow())).collect(Try.collect());
         try {
             ms.getOrThrow().forEach(this::install);
         } catch (Exception e) {
             throw new IllegalStateException("Failed to install module", e);
         }
+    }
+
+    private int orderClass(Class<?> a, Class<?> b) {
+        int va = a.isAnnotationPresent(Order.class) ? a.getAnnotation(Order.class).value() : Integer.MAX_VALUE;
+        int vb = b.isAnnotationPresent(Order.class) ? b.getAnnotation(Order.class).value() : Integer.MAX_VALUE;
+        return Integer.compare(va, vb);
     }
 }

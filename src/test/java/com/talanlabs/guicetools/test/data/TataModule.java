@@ -2,8 +2,10 @@ package com.talanlabs.guicetools.test.data;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
+import com.talanlabs.guicetools.Order;
 
 @MyModule
+@Order(1)
 public class TataModule extends AbstractModule {
 
     @Override
