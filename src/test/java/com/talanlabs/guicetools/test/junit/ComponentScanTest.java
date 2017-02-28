@@ -5,7 +5,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;
 import com.google.inject.Singleton;
-import com.talanlabs.guicetools.ComponentScanModule;
+import com.talanlabs.guicetools.scan.ComponentScanModule;
 import com.talanlabs.guicetools.test.data.Tata;
 import com.talanlabs.guicetools.test.data.Toto;
 import com.talanlabs.guicetools.test.data.sub.Titi;

@@ -4,7 +4,7 @@ import com.google.inject.Binder;
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.google.inject.Key;
-import com.talanlabs.guicetools.ConfigurationScanModule;
+import com.talanlabs.guicetools.scan.ConfigurationScanModule;
 import com.talanlabs.guicetools.test.data.MyModule;
 import com.talanlabs.guicetools.test.data.Tata;
 import com.talanlabs.guicetools.test.data.TataModule;

@@ -1,4 +1,4 @@
-package com.talanlabs.guicetools;
+package com.talanlabs.guicetools.scan;
 
 import com.google.common.collect.Sets;
 import com.google.inject.AbstractModule;

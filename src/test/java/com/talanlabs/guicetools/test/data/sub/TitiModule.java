@@ -2,8 +2,8 @@ package com.talanlabs.guicetools.test.data.sub;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Provides;
-import com.talanlabs.guicetools.Configuration;
-import com.talanlabs.guicetools.Order;
+import com.talanlabs.guicetools.scan.Configuration;
+import com.talanlabs.guicetools.scan.Order;
 import com.talanlabs.guicetools.test.data.MyModule;
 
 @MyModule

@@ -1,4 +1,4 @@
-package com.talanlabs.guicetools;
+package com.talanlabs.guicetools.scan;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

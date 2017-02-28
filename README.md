@@ -12,7 +12,7 @@ Add auto scan component and configuration for Guice
 </dependencies>
 ```
 
-## Usage
+## Usage Scan
 
 ### Component
 
@@ -52,4 +52,32 @@ And install scan module in guice module
 
 ```java
 install(new ConfigurationScanModule("com.example"));
+```
+
+## Usage Logger
+
+```java
+Guice.createInjector(new LoggerModuler(),...);
+```
+
+Inject field
+
+```java
+@InjectLogger
+Logger logger;
+```
+
+Inject method
+
+```java
+@InjectLogger
+void setLogger(Logger logger) {
+	
+}
+```
+
+Change name, default is class name
+
+```java
+@InjectLogger("test")
 ```

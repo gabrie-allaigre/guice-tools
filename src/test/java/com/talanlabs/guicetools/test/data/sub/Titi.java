@@ -1,8 +1,8 @@
 package com.talanlabs.guicetools.test.data.sub;
 
 import com.google.inject.Singleton;
-import com.talanlabs.guicetools.Component;
-import com.talanlabs.guicetools.Order;
+import com.talanlabs.guicetools.scan.Component;
+import com.talanlabs.guicetools.scan.Order;
 
 @Component
 @Singleton
