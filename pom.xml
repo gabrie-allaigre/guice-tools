@@ -6,7 +6,7 @@
 
     <groupId>com.talanlabs</groupId>
     <artifactId>guice-tools</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
     <name>Guice Tools</name>
     <description>Add tools for Guice</description>
     <url>https://gitlab.talanlabs.com/gabriel-allaigre/guice-tools</url>
